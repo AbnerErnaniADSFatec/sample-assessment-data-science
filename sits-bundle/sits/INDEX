@@ -1,0 +1,137 @@
+%>%                     Pipe
+:=                      Set by reference in data.table
+`sits_bands<-`          Replaces the names of the bands
+cerrado_2classes        Samples of classes Cerrado and Pasture
+plot                    Generic interface for ploting time series
+plot.classified_image   Generic interface for ploting classified images
+plot.keras_model        Generic interface for plotting a Keras model
+plot.patterns           Generic interface for ploting patterns
+plot.predicted          Generic interface for ploting time series
+                        predictions
+plot.probs_cube         Generic interface for plotting probability
+                        cubes
+plot.raster_cube        Generic interface for plotting stack cubes
+plot.som_evaluate_cluster
+                        Plot information about confunsion between
+                        clusters
+plot.som_map            Generic interface for plotting a SOM map
+point_mt_6bands         A time series sample with data from 2000 to
+                        2016
+samples_modis_4bands    Samples of nine classes for the state of Mato
+                        Grosso
+samples_mt_6bands       Samples of nine classes for the state of Mato
+                        Grosso
+sits-package            sits
+sits_FCN                Train a model using the a full Convolutional
+                        Neural Network
+sits_LSTM_FCN           Train a model using the a combination of LSTM
+                        and CNN
+sits_ResNet             Train a model using the ResNet model
+sits_TempCNN            Train a model using the Temporal Convolutional
+                        Neural Network
+sits_accuracy           Area-weighted classification accuracy
+                        assessment
+sits_apply              Apply a function over a time series.
+sits_bands              Informs the names of the bands
+sits_bbox               Get the bounding box of the data
+sits_classify           Classify time series or data cube using machine
+                        learning models
+sits_cluster_clean      Cluster cleaner
+sits_cluster_dendro     Clusters a set of time series using
+                        aglomerative hierarchical clustering
+sits_cluster_frequency
+                        Cluster contigency table
+sits_config             Reads a configuration file and loads it in the
+                        main environment
+sits_config_info        Information about configuration file
+sits_config_show        Shows the contents of the sits configuration
+                        file
+sits_cube               Defines a data cube
+sits_cube_copy          Creates the contents of a data cube
+sits_data_to_csv        Export a sits tibble data to the CSV format
+sits_deeplearning       Train a deep learning model using multi-layer
+                        perceptron
+sits_envelope           Envelope filter
+sits_filter             General function for filtering
+sits_formula_linear     Define a linear formula for classification
+                        models
+sits_formula_logref     Define a loglinear formula for classification
+                        models
+sits_from_zoo           Import time series in the zoo format to a sits
+                        tibble
+sits_get_data           Obtain time series from different sources
+sits_impute_linear      Linear imputation of NA values using C++
+                        implementation
+sits_interp             Interpolation function of the time series of a
+                        sits_tibble
+sits_keras_diagnostics
+                        Diagnostic information about a Keras deep
+                        learning model
+sits_kfold_validate     Cross-validate temporal patterns
+sits_label_classification
+                        Post-process a classified data raster probs to
+                        obtain a labelled image
+sits_label_majority     Post-process a classified data raster with a
+                        majority filter
+sits_labels             Returns the information about labels of a data
+                        set (tibble or cube)
+sits_labels_summary     Returns the information about labels of a
+                        tibble data set
+sits_lda                Train a sits classification model using linear
+                        discriminant analysis
+sits_linear_interp      Interpolation function of the time series in a
+                        sits tibble
+sits_merge              Merge two data sets (time series or cubes)
+sits_metadata_to_csv    Export a sits tibble metadata to the CSV format
+sits_missing_values     Remove missing values
+sits_mlr                Train a sits classification model using
+                        multinomial log-linear
+sits_ndwi               Builds normalized difference water index
+sits_patterns           Create temporal patterns using a generalised
+                        additive model (gam)
+sits_qda                Train a classification model using quadratic
+                        discriminant analysis
+sits_ranger             Train a sits classifiction model using fast
+                        random forest algorithm
+sits_regularize         Creates a regularized data cube from an
+                        irregular one
+sits_relabel            Relabels a sits tibble
+sits_rfor               Train a SITS classifiction model using random
+                        forest algorithm
+sits_sample             Sample a percentage of a time series
+sits_savi               Builds soil-adjusted vegetation index
+sits_select             Filter bands on a data set (tibble or cube)
+sits_sgolay             Smooth the time series using Savitsky-Golay
+                        filter
+sits_smooth             Post-process a classified data raster probs
+                        using smoothing
+sits_som_clean_samples
+                        Clean samples
+sits_som_cluster        Clustering a set of satellite image time series
+                        using SOM
+sits_som_evaluate_cluster
+                        Evaluate cluster
+sits_som_map            Generate a Kohonen map for sample quality
+                        control
+sits_svm                Train a sits classification model using a
+                        support vector machine
+sits_time_series        Retrieve time series for a row of a sits tibble
+sits_timeline           Obtains the timeline
+sits_to_xlsx            Saves the results of accuracy assessments as
+                        Excel files
+sits_to_zoo             Export data to be used to the zoo format
+sits_train              Train sits classification models
+sits_twdtw_classify     Find matches between patterns and time series
+                        using TWDTW
+sits_values             Return the values of a given sits tibble as a
+                        list of matrices.
+sits_view               Generic interface for visualization of data
+                        cube
+sits_whittaker          Filter the time series using Whittaker smoother
+sits_xgboost            Train a model with an extreme gradient boosting
+                        machine
+timeline_2000_2017      The timeline for the sequence of images for
+                        MOD13Q1 collection 6
+timeline_2013_2014      The timeline for the sequence of images one
+                        year (2013 to 2014)
+ts_zoo                  A time series in the ZOO format
