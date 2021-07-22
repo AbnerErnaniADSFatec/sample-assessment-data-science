@@ -1,0 +1,6 @@
+install.packages("shinythemes")
+install.packages("shinycssloaders")
+install.packages("shinydashboard") 
+install.packages("plotly")
+install.packages("leaflet")
+install.packages("ggthemes")
