@@ -49,7 +49,7 @@ Adicione o R-kernel ao Jupyter instalando uma especificação do kernel. Isso pe
 R -e "IRkernel::installspec(name = 'R3', displayname = 'sample-assessment')"
 ~~~
 
-Com as dependências instaladas é possível executar o ambiente do  Jupyter notebook, os testes podem ser encontrados em [Arquivo de Testes](./www/data/testes.ipynb):
+Com as dependências instaladas é possível executar o ambiente do  Jupyter notebook, os testes podem ser encontrados em [Arquivo de Testes](./DataScienceCAP394TrabalhoFinalAbnerAnjos.ipynb):
 
 ~~~dos
 jupyter lab
@@ -57,4 +57,4 @@ jupyter lab
 
 Com o ambiente do _RStudio_ aberto instalar os requisitos necessários pelo arquivo [`install-requirements.r`](./install-requirements.r) e iniciar a aplicação pelo arquivo [`app.r`](./app.r) com o auxílio de um browser.
 
-Os dados de teste podem ser adiquiridos no github por meio do link ["SITS Data"](https://github.com/e-sensing/sitsdata/tree/master/data) e também no link ["Fonte de dados de amostras de UCT com séries temporais"](https://www.kaggle.com/abneranjos/luccsamples).
+Os dados de teste podem ser adiquiridos no github por meio do link ["Fonte de dados de amostras de UCT com séries temporais"](https://www.kaggle.com/abneranjos/luccsamples).
