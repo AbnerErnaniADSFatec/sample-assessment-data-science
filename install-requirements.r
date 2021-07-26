@@ -1,3 +1,8 @@
+local({
+    r <- getOption("repos")
+    r["CRAN"] <- "https://cran-r.c3sl.ufpr.br/"
+    options(repos = r)
+})
 install.packages("devtools")
 install.packages("aws.s3")
 install.packages("shinythemes")
@@ -7,3 +12,7 @@ install.packages("plotly")
 install.packages("leaflet")
 install.packages("ggthemes")
 install.packages('gdalcubes')
+install.packages("sf" , dependencies = TRUE)
+system("cp -u -R ./sitsbundle/* /home/abner/miniconda3/envs/sample-assessment/lib/R/library")
+remotes::install_github("e-sensing/sits")
+remotes::install_github("e-sensing/sitsdata")

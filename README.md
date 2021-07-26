@@ -25,10 +25,11 @@ Fluxo de Trabalho do `sits`:
 
 ## Ambiente de desenvolvimento em R MiniConda
 
-Criar o ambiente conda:
+Atualizar e criar o ambiente conda:
 
 ~~~dos
-conda create --name sample-assessment r-base
+conda update -n base -c defaults conda && \
+    conda create --name sample-assessment r-base
 ~~~
 
 Executar o ambiente virtual criado acima:
@@ -41,9 +42,19 @@ Gerar o _kernel_ para o ambiente criado, instalando os pacotes `R-kernel` e `Jup
 
 ~~~dos
 conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits
-conda update -n base -c defaults conda
+~~~
+
+Intalar as dependências como a biblioteca `stars` para a manipulação de dados raster:
+
+~~~dos
 conda install -c conda-forge r-stars
 conda install -c conda-forge/label/cf202003 r-stars
+~~~
+
+Instalar mais as dependências para a visualização dos dados:
+
+~~~dos
+R -e "source('install-requirements.r')"
 ~~~
 
 Adicione o R-kernel ao Jupyter instalando uma especificação do kernel. Isso permite que o Jupyter reconheça o kernel e trabalhe com ele interativamente:
