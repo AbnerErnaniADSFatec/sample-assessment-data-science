@@ -41,6 +41,9 @@ Gerar o _kernel_ para o ambiente criado, instalando os pacotes `R-kernel` e `Jup
 
 ~~~dos
 conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits
+conda update -n base -c defaults conda
+conda install -c conda-forge r-stars
+conda install -c conda-forge/label/cf202003 r-stars
 ~~~
 
 Adicione o R-kernel ao Jupyter instalando uma especificação do kernel. Isso permite que o Jupyter reconheça o kernel e trabalhe com ele interativamente:
