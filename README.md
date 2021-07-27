@@ -71,4 +71,4 @@ Com as dependências instaladas é possível executar o ambiente do  Jupyter not
 jupyter lab
 ~~~
 
-Os dados de teste podem ser adiquiridos no github por meio do link ["Fonte de dados de amostras de UCT com séries temporais"](https://www.kaggle.com/abneranjos/luccsamples).
+Os dados de teste podem ser adiquiridos no github por meio do link ["Fonte de dados de amostras de UCT com séries temporais"](./data).
