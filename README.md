@@ -71,8 +71,8 @@ Com as dependências instaladas é possível executar o ambiente do Jupyter note
 
 Alguns testes em `Python` e `R` podem ser encontrados em:
 
- - Testes em Linguagem `R`: (`./testes_r.ipynb`)[./testes_r.ipynb];
- - Testes em Linguagem `Python`: (`./testes_python.ipynb`)[./testes_python.ipynb].
+ - Testes em Linguagem `R`: [`./testes_r.ipynb`](./testes_r.ipynb);
+ - Testes em Linguagem `Python`: [`./testes_python.ipynb`](./testes_python.ipynb).
 
 Os dados de teste podem ser adiquiridos no github por meio do link ["Fonte de dados de amostras de UCT com séries temporais"](./data).
 
