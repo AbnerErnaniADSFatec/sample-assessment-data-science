@@ -174,5 +174,5 @@ vignettes/*.pdf
 
 # Python download files
 
-/large-data
-**/large-data
+/large-data/
+**/large-data/**
