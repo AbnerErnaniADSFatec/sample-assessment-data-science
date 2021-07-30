@@ -1,7 +1,11 @@
-# [Sample Assessment App](https://github.com/AbnerErnaniADSFatec/sample-assessment)
+# Sample Assessment Data Science
 
 [![Miniconda](https://img.shields.io/badge/miniconda-3-green)](https://docs.conda.io/en/latest/miniconda.html)
 [![Docker SITS](https://img.shields.io/badge/BDC_SITS_-1.4.1103-green)](https://hub.docker.com/r/brazildatacube/sits-rstudio)
+
+Este repositório contém um ambiente de testes para a interface de análise exploratória de amostras [Sample Assessment App](https://github.com/AbnerErnaniADSFatec/sample-assessment).
+
+## Abstract (Provisório)
 
 Esta proposta pretende utilizar o método SOM implementado pelo pacote SITS em linguagem R combinado com o pacote Shiny para o desenvolvimento de aplicações web com a linguagem R e Jupyter Lab para disponibilizar para o usuário um ambiente colaborativo para a análise eficiente das amostras como uma solução de software. As soluções de software têm como objetivo facilitar o acesso aos métodos de análise a pesquisadores que não possuem conhecimentos técnicos específicos de tecnologia da informação como aplicação de linguagens de programação e construção de algoritmos. Atualmente o mercado para ferramentas de construção de software está superaquecido e cada vez mais surgem novos produtos para desenvolver aplicações mais específicas e customizadas. Assim é possível construir uma interface gráfica que aplique os métodos apresentados anteriormente que utilizam a linguagem de programação R, logo há ferramentas como o pacote Shiny para o desenvolvimento de aplicações para a web com suporte para a manipulação de dados e geração de gráficos.
 
