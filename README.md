@@ -67,12 +67,12 @@ Adicione o R-kernel ao Jupyter instalando anteriormente uma especificação do k
 R -e "IRkernel::installspec(name = 'R3', displayname = 'sample-assessment')"
 ~~~
 
-Com as dependências instaladas é possível executar o ambiente do Jupyter notebook, os testes e códigos podem ser encontrados em [Jupyter Notebook para a Análise de Amostras](./DataScienceCAP394TrabalhoFinalAbnerAnjos.ipynb).
+Com as dependências instaladas é possível executar o ambiente do Jupyter notebook, os testes e códigos podem ser encontrados em [Jupyter Notebook para a Análise de Amostras](./DataScienceCAP394TrabalhoFinalAbnerAnjos.ipynb). Também é possível executar os _scripts_ presentes no [Jupyter Notebook para o Processamento de Imagens](./ImageProcessingSER413TrabalhoFinalAbnerAnjos.ipynb).
 
-Alguns testes em `Python` e `R` podem ser encontrados em:
+Alguns testes em `Python` e `R` podem ser encontrados em [`./testes`](./testes):
 
- - Testes em Linguagem `R`: [`./testes_r.ipynb`](./testes_r.ipynb);
- - Testes em Linguagem `Python`: [`./testes_python.ipynb`](./testes_python.ipynb).
+ - Testes em Linguagem `R`: [`./testes_r.ipynb`](./testes/testes_r.ipynb);
+ - Testes em Linguagem `Python`: [`./testes_python.ipynb`](./testes/testes_python.ipynb).
 
 Os dados de teste podem ser adiquiridos no github por meio do link ["Fonte de dados de amostras de UCT com séries temporais"](./data).
 
