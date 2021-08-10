@@ -2,6 +2,18 @@ import os
 import numpy as np
 import datetime
 
+## An image is a two dimensional array x and y
+## Min and Max is the value for both dimensions x and y
+## Cut a perfect square from given image
+def cut_square_image(image, _min, _max):
+    _cut = []
+    for y in range(_min, _max):
+        _y = []
+        for x in range(_min, _max):
+            _y.append(image[y][x])
+        _cut.append(_y)
+    return np.array(_cut)
+
 ## Datacube is a EOCubes Object from https://github.com/AbnerErnaniADSFatec/eocubes
 def download_images(datacube, path = "./raster", satellite = None, band = None,
     start_date = None, end_date = None, group_dates = []):
