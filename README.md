@@ -1,7 +1,9 @@
 # Sample Assessment Data Science
 
 [![Miniconda](https://img.shields.io/badge/miniconda-3-green)](https://docs.conda.io/en/latest/miniconda.html)
-[![Docker SITS](https://img.shields.io/badge/BDC_SITS_-1.4.1103-green)](https://hub.docker.com/r/brazildatacube/sits-rstudio)
+[![Docker SITS](https://img.shields.io/badge/BDC_SITS_RStudio-1.4.1103-green)](https://hub.docker.com/r/brazildatacube/sits-rstudio)
+[![Docker SITS](https://img.shields.io/badge/BDC_SITS_RStudio-0.12.0-green)](https://hub.docker.com/r/brazildatacube/sits-rstudio)
+[![R SITS](https://img.shields.io/badge/BDC_R_SITS-0.12.0-green)](https://github.com/e-sensing/sits)
 
 Este repositório contém um ambiente de testes para a interface de análise exploratória de amostras [Sample Assessment App](https://github.com/AbnerErnaniADSFatec/sample-assessment).
 
