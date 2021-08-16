@@ -74,3 +74,19 @@ def download_images(datacube, path = "./raster", satellite = None, band = None,
         print("\nAll images downloaded!\n")
     else:
         print(f"{total} images matched! No idownload!\n")
+        
+
+def download_bands(datacube, path = "./raster", satellite = None, bands = [],
+    start_date = None, end_date = None, group_dates = []):
+    for band in bands:
+        if start_date and end_date:
+            download_images(datacube, path, satellite, band,
+                start_date = start_date,
+                end_date = end_date
+            )
+        elif group_dates:
+            download_images(datacube, path, satellite, band,
+                group_dates = group_dates
+            )
+        else:
+            download_images(datacube, path, satellite, band)
