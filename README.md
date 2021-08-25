@@ -57,10 +57,17 @@ conda install -c conda-forge r-stars
 conda install -c conda-forge/label/cf202003 r-stars
 ~~~
 
-Instalar mais as dependências para a visualização dos dados listadas no arquivo [`install-requirements.r`](./install-requirements.r) para facilitar a instalação:
+Instalar mais as dependências para a visualização e análise dos dados listadas no arquivo [`./utils/install-requirements.r`](./utils/install-requirements.r) para facilitar a instalação:
 
 ~~~dos
-R -e "source('install-requirements.r')"
+R -e "source('./utils/install-requirements.r')"
+~~~
+
+Atualize para a versão mais recente do `pip` para instalar as dependências relacionadas a aquisição dos dados para o script em Python que estão listadas no arquivo [`./utils/requirements.txt`](./utils/requirements.txt) para facilitar a instalação:
+
+~~~dos
+python -m pip install --upgrade pip &&
+    python -m pip install -r ./utils/requirements.txt
 ~~~
 
 Adicione o R-kernel ao Jupyter instalando anteriormente uma especificação do kernel. Isso permite que o Jupyter reconheça o kernel e trabalhar com ele interativamente:
