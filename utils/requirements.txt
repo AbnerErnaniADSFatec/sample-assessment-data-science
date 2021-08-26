@@ -2,4 +2,5 @@ git+https://github.com/AbnerErnaniADSFatec/eocubes
 git+https://github.com/brazil-data-cube/wlts.py@b-0.6
 ipywidgets
 seaborn
+tensorflow
 wtss

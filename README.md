@@ -47,13 +47,12 @@ conda activate sample-assessment
 Gerar o _kernel_ para o ambiente criado, instalando os pacotes `R-kernel` e `Jupyter`, além de instalar as dependências do `sits` com o ambiente virtual conda iniciado acima:
 
 ~~~dos
-conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits
+conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits r-gdalcubes r-stars r-tensorflow
 ~~~
 
 Intalar as dependências como a biblioteca `stars` para a manipulação de dados raster:
 
 ~~~dos
-conda install -c conda-forge r-stars
 conda install -c conda-forge/label/cf202003 r-stars
 ~~~
 
