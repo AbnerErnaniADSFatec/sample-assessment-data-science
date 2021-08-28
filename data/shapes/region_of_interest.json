@@ -4,8 +4,7 @@
         {
             "type": "Feature",
             "properties": {
-                "fid": 1,
-                "id": 1
+                "description": "LineString Bounding Box"
             },
             "geometry": {
                 "type": "LineString",
@@ -24,8 +23,7 @@
         {
             "type": "Feature",
             "properties": {
-                "fid": 1,
-                "id": 1
+                "description": "Top left corner Bounding Box"
             },
             "geometry": {
                 "type": "Point",
@@ -38,8 +36,7 @@
         {
             "type": "Feature",
             "properties": {
-                "fid": 2,
-                "id": 2
+                "description": "Bottom right corner Bounding Box"
             },
             "geometry": {
                 "type": "Point",
@@ -52,8 +49,7 @@
         {
             "type": "Feature",
             "properties": {
-                "fid": 2,
-                "id": 2
+                "description": "Bounding Box Centroid"
             },
             "geometry": {
                 "type": "Point",
@@ -66,8 +62,7 @@
         {
             "type": "Feature",
             "properties": {
-                "fid": 1,
-                "id": 1
+                "description": "Area of Interest Coverage"
             },
             "geometry": {
                 "type": "MultiPolygon",
