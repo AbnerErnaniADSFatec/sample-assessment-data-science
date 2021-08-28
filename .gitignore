@@ -176,3 +176,5 @@ vignettes/*.pdf
 
 ./data/raster
 **/raster/**
+./testes/**
+**/testes/**
