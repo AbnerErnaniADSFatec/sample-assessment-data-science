@@ -1,98 +1,98 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                "description": "LineString Bounding Box"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        -65.764703233086351,
-                        -9.846445609165745
-                    ],
-                    [
-                        -63.636464122339149,
-                        -11.039404751961259
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "description": "Top left corner Bounding Box"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -65.764703233086351,
-                    -9.846445609165745
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "description": "Bottom right corner Bounding Box"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -63.636464122339149,
-                    -11.039404751961259
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "description": "Bounding Box Centroid"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -64.700586318969727,
-                    -10.442924499511721
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "description": "Area of Interest Coverage"
-            },
-            "geometry": {
-                "type": "MultiPolygon",
-                "coordinates": [
-                    [
-                        [
-                            [
-                                -65.76470947265625,
-                                -11.03940486907959
-                            ],
-                            [
-                                -65.76470947265625,
-                                -9.846444129943848
-                            ],
-                            [
-                                -63.636463165283203,
-                                -9.846444129943848
-                            ],
-                            [
-                                -63.636463165283203,
-                                -11.03940486907959
-                            ],
-                            [
-                                -65.76470947265625,
-                                -11.03940486907959
-                            ]
-                        ]
-                    ]
-                ]
-            }
-        }
-    ]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Region of Interest Bounding Box"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -65.335,
+            -9.849
+          ],
+          [
+            -63.6411,
+            -11.0301
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Region of Interest Top Left Corner"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.335,
+          -9.849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Region of Interest Bottom right corner"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.6411,
+          -11.0301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Region of Interest Bounding Box Extent"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -65.335,
+                -11.0301
+              ],
+              [
+                -65.335,
+                -9.849
+              ],
+              [
+                -63.6411,
+                -9.849
+              ],
+              [
+                -63.6411,
+                -11.0301
+              ],
+              [
+                -65.335,
+                -11.0301
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Region of Interest Bounding Box Centroid"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.48805,
+          -10.43955
+        ]
+      }
+    }
+  ]
 }

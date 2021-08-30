@@ -1,5 +1,6 @@
 library(sits)
 library(sitsdata)
+library(rgdal)
 library(dplyr)
 library(ggplot2)
 library(ggrepel)
@@ -68,6 +69,50 @@ point_to_shape_sp <- function (data.tb, date, class_label) {
         proj4string = sp::CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0")
     )
     return(sp_data.df)
+}
+
+save_shapefile <- function (data.tb, filename) {
+    group_shape <- dplyr::select(data.tb,
+        longitude, latitude,
+        start_date, end_date,
+        label
+    )
+    group_shape <- dplyr::select(data.tb,
+        longitude, latitude,
+        start_date, end_date,
+        label
+    )
+    try(
+        group_shape <- dplyr::select(data.tb,
+            longitude, latitude,
+            start_date, end_date,
+            label, cube
+        )
+    )
+    try(
+        group_shape <- dplyr::select(data.tb,
+            longitude, latitude,
+            start_date, end_date,
+            label, cube, -time_series
+        )
+    )
+    try(
+        group_shape <- dplyr::select(data.tb,
+            longitude, latitude,
+            start_date, end_date,
+            label, cube,
+            id_neuron, eval, post_prob
+        )
+    )
+    sp_data.tb.df <- as.data.frame(group_shape)
+    points_SF <- as.data.frame(sp_data.tb.df)
+    xy <- points_SF[, c(1, 2)]
+    sp_data.df <- sp::SpatialPointsDataFrame(
+        coords = xy,
+        data = points_SF,
+        proj4string = sp::CRS("+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0")
+    )
+    writeOGR(sp_data.df, ".", filename, driver = "ESRI Shapefile")
 }
 
 as_sample <- function(data.tb) {
