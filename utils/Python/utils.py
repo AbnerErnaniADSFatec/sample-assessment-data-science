@@ -48,11 +48,11 @@ class Utils():
     ## An image is a two dimensional array x and y
     ## Min and Max is the value for both dimensions x and y
     ## Cut a perfect square from given image
-    def cut_square_image(self, image, _min, _max):
+    def cut_square_image(self, image, _minX, _maxX, _minY, _maxY):
         _cut = []
-        for y in range(_min, _max):
+        for y in range(_minY, _maxY):
             _y = []
-            for x in range(_min, _max):
+            for x in range(_minX, _maxX):
                 _y.append(image[y][x])
             _cut.append(_y)
         return np.array(_cut)

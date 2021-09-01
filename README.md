@@ -63,7 +63,7 @@ R -e "source('./utils/R/install-requirements.r')"
 R -e "IRkernel::installspec(name = 'R3', displayname = 'sample-assessment')"
 ~~~
 
- - **Step 3**. Update the `Python` dependencies installation. Update the `pip` to the last version and install the requirements listed in this file [`./utils/Python/requirements.txt`](./utils/requirements.txt). Maybe you need github login, because there are a dependency called `EO Cubes` that will need permission user for installation:
+ - **Step 3**. Update the `Python` dependencies installation. Update the `pip` to the last version and install the requirements listed in this file [`.utils/Python/requirements.txt`](./utils/requirements.txt). Maybe you need github login, because there are a dependency called `EO Cubes` that will need permission user for installation:
 
 ~~~dos
 python -m pip install --upgrade pip &&
