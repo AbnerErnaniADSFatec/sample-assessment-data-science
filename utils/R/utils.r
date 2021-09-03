@@ -19,6 +19,7 @@ library(randomForest)
 library(rpart)
 library(rpart.plot)
 library(e1071)
+library(fitdistrplus)
 
 read_file <- function(file, ext) {
   data.tb <- NULL
@@ -127,10 +128,10 @@ as_sample <- function(data.tb) {
 
 save_file <- function(data.tb, name, ext) {
     if (ext == "csv") {
-        write.csv(data.tb, paste("./data/samples/csv/", name, ".csv", sep=""), row.names = FALSE)
+        write.csv(data.tb, paste(name, ".csv", sep=""), row.names = FALSE)
     }
     if (ext == "rda") {
-        save(data.tb, file = paste("./data/ts_coupled_samples/", name, ".rda", sep=""))
+        save(data.tb, file = paste(name, ".rda", sep=""))
     }
 }
 
@@ -157,4 +158,21 @@ getMode <- function(v) {
 
 getRange <- function(v) {
     return(max(v) - min(v))
+}
+
+getDistribution <- function(vector){
+    distribution <- data.frame()
+    vector <- sort(vector)
+    for (i in 1:length(vector)) {
+        values <- c(
+            vector[i],
+            length(which(vector == vector[i]))
+        )
+        distribution <- rbind(
+            distribution,
+            values
+        )
+    }
+    colnames(distribution) <- c("value", "count")
+    return(distribution)
 }
