@@ -9,17 +9,29 @@ This repository contains a test environment for the web interface for explorator
 
 ## Abstract
 
-Land Use and Land Cover (LULC) classification became a difficult task due to current changes that are increasingly unpredictable and dynamic. However this is increasing the development of auxiliary tools based on programming language that facilitate the Earth Observation Data (EO Data) acquisition and analysis. This approach aims to demonstrate a classification method based on image data extraction and analysis tools using SITS - Satellite Image Time Series Tool and Random Forest algorithm. This method has been tested with LULC samples in Southwest Amazon in Brazil localized in the State of Rondonia due to the increase of land use change in this area. The tests demonstrated that the available tools are important because it facilitates the customization of necessary parameters for image download and data cube construction.
+Land Use and Land Cover (LULC) classification became a difficult task due to problems about data collection and current changes that are increasingly unpredictable and dynamic. This approach aims to demonstrate a classification method based on usage of image data extraction and analysis tools to calculate the skewness and kurtosis of the time series distribution curve and the Random Forest algorithm to classify this features in areas of difficult data collection. This method has been tested with LULC samples in Southwest Amazon in Brazil localized in the State of Rondônia due to the difficulty in collecting data in this area.
+
+**Key words** – Time Series, Land Use Classification, Random Forest, Satellite Image Data, Spatial Temporal Analysis, Software Tools, Image Processing.
+
+## Resumo
+
+A classificação do Uso e Cobertura da Terra (UCT) tornouse uma árdua tarefa devido aos problemas na aquisição de dados e as mudanças que são cada vez mais imprevisíveis e dinâmicas. Este estudo visa demonstrar um método de classificação baseado no uso de ferramentas de extração e análise de dados de imagens para o cálculo da assimetria e achatamento da curva das séries temporais e o algoritmo Random Forest para a classificação destas características em áreas de difícil coleta. Este método foi testado com amostras UCT no sudoeste da Amazônia no Brasil localizadas no estado de Rondônia devido a dificuldade de coleta de dados nesta área.
+
+**Palavras-chave** – Séries temporais, Classificação do Uso da Terra, Random Forest, Imagens de Satélite, Análise Espaço-Temporal, Soluções de Software, Processamento de Imagens.
 
 ## Introduction
 
-Changes in land use and land cover are increasingly unforeseen and dynamic, which makes the classification of its characteristics an arduous task, so the use of tools that help in the process of acquisition and analysis of land observation data is debatable. were developed due to the extensive mass of data that is generated daily by satellite images.
+Changes in Land Use and Land Cover (LULC) are increasingly unpredictable and dynamic, which makes the classification of their characteristics a difficult task [[1]](./README.md#References). Classified maps of LULC change can visually demonstrate deforestation, disturbances, pressure and urbanization [[2]](./README.md#References).
 
-Unforeseen changes in usage and coverage classes can bring challenges such as models that do not represent the desired variability or that have been misclassified. This study seeks to demonstrate how these tools can make the classification process fast and efficient by presenting a case study on the identification of certain land use and land cover classes in the southwestern Amazon over the state of Rondônia.
+Remote Sensing techniques and Earth Observation Data (EO Data) satellites provide a continuous and consistent set of information about land use due to their dense amount of data that is generated daily [[3]](./README.md#References). Therefore this is increasing the development of auxiliary tools based on programming language that facilitate the EO Data acquisition and analysis and the extensive use of these information, there is a growing demand to optimize the map classification process.
 
-This Approach intends to use the SOM method implemented by the SITS package in R language combined with the Shiny package for the development of web applications with an R language and Jupyter Lab to provide the user with a collaborative environment for an efficient analysis of software as a solution . The software solutions aim to facilitate access to analysis methods for researchers who do not have specific technical knowledge of information technology, such as the application of programming languages and the construction of algorithms. Currently, the market for software building tools is overheated and new products are increasingly appearing to develop more specific and customized applications. Thus, it is possible to build a graphical interface that applies the previous training methods using the R programming language, then there are tools like the Shiny package for developing web applications with support for data manipulation and graph generation.
+Spatial temporal analysis is an important feature for LULC classification due to the biodiversity change and climate change throughout the year. Understanding these patterns is essential for studies addressing environmental modeling and design and monitoring of land use policies [[4]](./README.md#References). However, there are current problems in data acquisition related to the sensors used, the climate of the region of interest that causes cloud coverage and other variables that can cause nodata in the collections.
+
+The legal Amazon extends over an area of approximately 5,200,000 km2 and represents 59% of Brazil’s land mass. The region is home to a very high ecological and socioeconomic diversity [[4]](./README.md#References). Although, there is difficulties in collecting data from Amazon biome due to the high cloud coverage and the tasks for processing of images takes time until the final classification result. This study aims to demonstrate how these tools can make the classification process faster and efficient by presenting a case study on the identification of certain LULC classes.
 
 ## Material and Methods
+
+This approach uses a dataset of LULC samples coupled with time series collected with the creation of a local data cube. The Data extraction was performed by three steps: (1) the images download and analysis of quality, (2) the time series data extraction and (3) the samples quality analysis for the Random Forest algorithm input.
 
 For this approach, a dataset of LULC samples identified by specialists based on high-resolution images combined with time series collected with the creation of a Sentinel-2 satellite local data cube, acquired with the STAC Client tool in Python programming language, was used. This images was previously processed and analyzed in the Jupyter Notebook workflow publishing and presentation platform.
 
@@ -85,15 +97,23 @@ All test data can be acquired from github via the link ["Data Source"](https://g
 
 ## Conclusion
 
-As a result, it is expected to develop a case study about the environment for an exploratory analysis of UCT combined with time series collected from remote sensing images to present attributes that demonstrate the calculation of accuracy and quality of classified maps. It also seeks to develop software solutions for the dissemination of these methods to a scientific community that does not master information technology techniques.
+This approach presented a classification method based on usage of image data extraction and analysis tools to calculate the asymmetry and flattening of the time series distribution curve and the Random Forest algorithm to classify this features.
 
-The reproducibility in publications of methods in the area of knowledge is an important characteristic that has not been explored much in previous studies, at this point it is debatable the development of a platform that applies this method of structured graduation and that allows the sharing of information previously by means of a collaborative environment.
+The tests demonstrated that the available tools are important because it facilitates the customization of necessary parameters for image download and data cube construction. Time series extraction tools as SITS have demonstrated high usability when dealing with time series analysis, mainly with the application of cloud coverage and data interpolation.
+
+The classification of time series based on the distribution of values using statistical moment calculation tools such as asymmetry and flattening of the distribution curve demonstrated high accuracy to classify four LULC samples. However, this approach needs more studies related to better use of data extraction and analysis tools and how these tools can influence the final result.
 
 ## References
 
- - [1] Lorena A. Santos, Karine R. Ferreira, Gilberto Camara, Michelle C. A. Picoli, and Rolf E. Simoes. Quality control and class noise reduction of satellite image time series. ISPRS Journal of Photogrammetry and Remote Sensing, 177:75–88, 2021. 
-
- - [2] Rwanga, S.S. and Ndambuki, J.M. (2017) Accuracy Assessment of Land Use/Land Cover Classification Using Remote Sensing and GIS. International Journal of Geosciences, 8, 611-622. 
-
- - [3] Lorena Alves Santos, Karine Ferreira, Michelle Picoli, Gilberto Camara, Raul Zurita-Milla, and Ellen-Wien Augustijn. Identifying spatiotemporal patterns in land use and cover samples from satellite image time series. MDPI - Remote Sensing, 13(5):974, 2021. 
-
+ - [1] Sophia S. Rwanga and Ndambuki J. M. Accuracy assessment of land use/land cover classification using remote sensing and GIS. International Journal of Geosciences, 8(4):611–622, 2017.
+ - [2] Pontus Olofsson, Giles M. Foody, Martin Herold, Stephen V. Stehman, Curtis E. Woodcock, and Michael A. Wulder. Good practices for estimating area and assessing accuracy of land change. Journal of Remote Sensing of Environment, 148:42–57, 2014.
+ - [3] Adeline Marinho Maciel and Lúbia Vinhas. Time series classification using features extraction to identification of use land and cover land: A case study in the municipality of itaqui, south region of brazil. Anais do XVIII Simpósio Brasileiro de Sensoriamento Remoto, 2017.
+ - [4] Cláudio Aparecido de Almeida, Alexandre Camargo Coutinho, Júlio César Dalla Mora Esquerdo, Marcos Adami, Adriano Venturieri, Cesar Guerreiro Diniz, Nadine Dessay, Laurent Durieux, and Alessandra Rodrigues Gomes. High spatial resolution land use and land cover mapping of the Brazilian Legal Amazon in 2008 using Landsat-5 TM and MODIS data. Acta Amazonia, 46(3):291 – 302, September 2016.
+ - [5] Gilberto Camara and Rolf Simoes. Data sets for the sits package, 2021.
+ - [6] Matheus C Zaglia, Lubia Vinhas, Gilberto R Queiroz, and Rolf Simoes. Catalogação de Metadados do Cubo de Dados do Brasil com o SpatioTemporal Asset Catalog. Proceedings XX GEOINFO, pages 280–285, 2019.
+ - [7] Mathieu Lepot, Jean-Baptiste Aubin, and François H.L.R. Clemens. Interpolation in time series: An introductive overview of existing methods, their performance criteria and uncertainty assessment. MDPI, 9:796, 2017.
+ - [8] Rolf Simoes, Gilberto Camara, Felipe Souza, Pedro Andrade, Lorena Santos, Karine Ferreira, Gilberto Queiroz, Alexandre Ywata de Carvalho, and Victor Maus. sits: Data Analysis and Machine Learning using Satellite Image Time Series. INPE - Brazilian National Institute for Space Research, Sao Jose dos Campos, Brazil, 2021.
+ - [9] Lorena A. Santos, KarinerR. Ferreira, Gilberto Camara, Michelle C. A. Picoli, and Rolf E. Simoes. Quality control and class noise reduction of satellite image time series. ISPRS Journal of Photogrammetry and Remote Sensing, 177:75–88, 2017.
+ - [10] Ronald E. Walpole, Raymond H. Myers, Sharon L. Myers, and Keying Ye. Probability & Statistics for Engineers & Scientists. Pearson, 9 edition, 2012.
+ - [11] R Core Team. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria, 2013.
+ - [12] Serhii Havryliuk, Mykola Korol, Olha Tokar, Vovk Olena, and Lubov Kolyasa. Using the random forest classification for land cover interpretation of landsat images in the prykarpattya region of ukraine. 2018 IEEE 13th International Scientific and Technical Conference on Computer Science and Information Technologies (CSIT), 2018.
