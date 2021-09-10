@@ -1,12 +1,11 @@
 """
-API - EO Data Cube.
-Python Client Library for Earth Observation Data Cubes.
-This abstraction uses STAC.py library provided by BDC Project.
+Data Science Sample Assessment & Analysis App
+Script utils for Land Use and Land Cover Classification.
 
 =======================================
-begin                : 2021-05-01
+begin                : 2021-08-03
 git sha              : $Format:%H$
-copyright            : (C) 2020 by none
+copyright            : (C) 2021 by Abner
 email                : none@inpe.br
 =======================================
 
@@ -22,14 +21,26 @@ import numpy as np
 
 
 class Point(object):
+    """Abstraction class for point coordinates values.
+    
+    Parameters
+     - x <float, required>: the x value for coordinate.
+     - y <float, required>: the y value for coordinate.
+     
+    Methods
+     getX(), getY()
+    """
     def __init__(self,x,y):
+        """Build the abstraction class for point coordinates values."""
         self.x = x
         self.y = y
 
     def getX(self):
+        """Return X value."""
         return self.x
 
     def getY(self):
+        """Return Y value."""
         return self.y
 
 class Utils():
@@ -45,10 +56,20 @@ class Utils():
      - AttributeError and ValueError: If a given parameter is not correctly formatted.
     """
 
-    ## An image is a two dimensional array x and y
-    ## Min and Max is the value for both dimensions x and y
-    ## Cut a perfect square from given image
     def cut_square_image(self, image, _minX, _maxX, _minY, _maxY):
+        """An image is a two dimensional array x and y Min and Max is the value for both dimensions x and y 
+        Cut a perfect square from given image.
+        
+        Parameters:
+         - image <array, required>: An two dimensional array with image pixels values.
+         - _minX <int, required>: The minimum X value for axis.
+         - _maxX <int, required>: The maxmum X value for axis.
+         - _minY <int, required>: The minimum Y value for axis.
+         - _maxY <int, required>: The maxmum Y value for axis.
+         
+        Raise
+         - AttributeError and ValueError: If a given parameter is not correctly formatted.
+        """
         _cut = []
         for y in range(_minY, _maxY):
             _y = []
@@ -60,15 +81,31 @@ class Utils():
     ## Datacube is a EOCubes Object from https://github.com/AbnerErnaniADSFatec/eocubes
     def download_images(self, datacube, path = "./raster", satellite = None, band = None,
         start_date = None, end_date = None, group_dates = []):
+        """An abstraction to download images of one band based on EOCubes Package.
+        
+        Parameters:
+         - datacube <EODataCube, required>: An EOCubes object with data cube settings.
+         - path <string, required>: The path address to download the files, the default is ./raster.
+         - satellite <string, required>: A string with satellite from metadata image to structure local data cube.
+         - band <string, required>: The spectral band for download.
+         - start_date <string, optional>: The string start date formated "yyyy-mm-dd" to complete the interval from EOCubes.
+         - end_date <string, optional>: The string end date formated "yyyy-mm-dd" to complete the interval.
+         - group_dates <list, optional>: The list with selected dates to download formated "yyyy-mm-dd".
+         
+        Obs.: If any date filter is not provided, the entire data cube will be downloaded.
+        
+        Raise
+         - AttributeError and ValueError: If a given parameter is not correctly formatted.
+        """
         try:
             os.mkdir(path)
-            print(f"Created file dir ({path}) to download!\n")
+            print(f"Dir file ({path}) created for download!\n")
         except:
             pass
         dates = list(datacube.data_images.keys())
         dates.reverse()
         if start_date and end_date:
-            print(f"Given time interval: {start_date}/{end_date}\n")
+            print(f"Time range: {start_date} / {end_date}\n")
             start_date = datetime.datetime.strptime(start_date, '%Y-%m-%d')
             end_date = datetime.datetime.strptime(end_date, '%Y-%m-%d')
             images = []
@@ -76,7 +113,7 @@ class Utils():
                 if start_date <= date <= end_date:
                     images.append(datacube.data_images[date])
         elif group_dates:
-            print(f"Given group dates: {group_dates}\n")
+            print(f"Dates group: {group_dates}\n")
             images = []
             for date in group_dates:
                 near = datacube.nearTime(date)
@@ -111,7 +148,7 @@ class Utils():
                     print(f"Image saved on {save_dir}")
                     print(f"Download Complete {item}/{len(images)} .......\n")
                 else:
-                    print(f"Image Already exists on {save_dir}")
+                    print(f"The Image Already exists on {save_dir}")
                     print(f"Not download {item}/{len(images)} .......\n")
                 item += 1
             print("\nAll images downloaded!\n")
@@ -121,6 +158,22 @@ class Utils():
 
     def download_bands(self, datacube, path = "./raster", satellite = None, bands = [],
         start_date = None, end_date = None, group_dates = []):
+        """An abstraction to download images of a list of bands based on EOCubes Package.
+        
+        Parameters:
+         - datacube <EODataCube, required>: An EOCubes object with data cube settings.
+         - path <string, required>: The path address to download the files, the default is ./raster.
+         - satellite <string, required>: A string with satellite from metadata image to structure local data cube.
+         - band <list, required>: The spectral bands for download.
+         - start_date <string, optional>: The string start date formated "yyyy-mm-dd" to complete the interval from EOCubes.
+         - end_date <string, optional>: The string end date formated "yyyy-mm-dd" to complete the interval.
+         - group_dates <list, optional>: The list with selected dates to download formated "yyyy-mm-dd".
+         
+        Obs.: If any date filter is not provided, the entire data cube will be downloaded.
+        
+        Raise
+         - AttributeError and ValueError: If a given parameter is not correctly formatted.
+        """
         for band in bands:
             if start_date and end_date:
                 self.download_images(datacube, path, satellite, band,
@@ -135,11 +188,13 @@ class Utils():
                 self.download_images(datacube, path, satellite, band)
 
     def getGrayDiff(self, img, currentPoint, tmpPoint):
+        """Calculating the gray difference in an image."""
         return abs(
             int(img[currentPoint.x,currentPoint.y]) - int(img[tmpPoint.x,tmpPoint.y])
         )
 
     def selectConnects(self, p):
+        """Point selection for the region growth algorithm."""
         if p != 0:
             connects = [
                 Point(-1, -1), Point(0, -1), Point(1, -1),
@@ -154,6 +209,17 @@ class Utils():
         return connects
 
     def regionGrow(self, img, seeds, thresh, p = 1):
+        """Implementation of the region growth algorithm based on an array image.
+        
+        Parameters:
+         - img <array, required>: An two dimensional array with image pixels values.
+         - seeds <list, required>: A list with the Points seeds to region growing.
+         - thresh <float, required>: Threshold value for algorithm.
+         - p <int, optional>: The p value for algorithm.
+         
+        Raise
+         - AttributeError and ValueError: If a given parameter is not correctly formatted.
+        """
         shape = (len(img), len(img[0]))
         height, weight = shape
         seedMark = np.zeros(shape)
