@@ -15,7 +15,7 @@ Land Use and Land Cover (LULC) classification became a difficult task due to pro
 
 ## Resumo
 
-A classificação do Uso e Cobertura da Terra (UCT) tornouse uma árdua tarefa devido aos problemas na aquisição de dados e as mudanças que são cada vez mais imprevisíveis e dinâmicas. Este estudo visa demonstrar um método de classificação baseado no uso de ferramentas de extração e análise de dados de imagens para o cálculo da assimetria e achatamento da curva das séries temporais e o algoritmo Random Forest para a classificação destas características em áreas de difícil coleta. Este método foi testado com amostras UCT no sudoeste da Amazônia no Brasil localizadas no estado de Rondônia devido a dificuldade de coleta de dados nesta área.
+A classificação do Uso e Cobertura da Terra (UCT) tornou-se uma árdua tarefa devido aos problemas na aquisição de dados e as mudanças que são cada vez mais imprevisíveis e dinâmicas. Este estudo visa demonstrar um método de classificação baseado no uso de ferramentas de extração e análise de dados de imagens para o cálculo da assimetria e achatamento da curva das séries temporais e o algoritmo Random Forest para a classificação destas características em áreas de difícil coleta. Este método foi testado com amostras UCT no sudoeste da Amazônia no Brasil localizadas no estado de Rondônia devido a dificuldade de coleta de dados nesta área.
 
 **Palavras-chave** – Séries temporais, Classificação do Uso da Terra, Random Forest, Imagens de Satélite, Análise Espaço-Temporal, Soluções de Software, Processamento de Imagens.
 
