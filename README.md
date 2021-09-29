@@ -69,20 +69,20 @@ conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits r-gdalcu
 R -e "source('./utils/R/install-requirements.r')"
 ~~~
 
- - Add `R-Kernel` kernel specification to `Jupyter` installation, so long the `Jupyterhub` will recognize the kernel installation to work interactively:
-
-~~~dos
-R -e "IRkernel::installspec(name = 'R3', displayname = 'sample-assessment')"
-~~~
-
- - **Step 3**. Update the `Python` dependencies installation. Update the `pip` to the last version and install the requirements listed in this file [`.utils/Python/requirements.txt`](./utils/Python/requirements.txt). Maybe you need github login, because there are a dependency called `EO Cubes` that will need permission user for installation:
+ - Update the `Python` dependencies installation. Update the `pip` to the last version and install the requirements listed in this file [`.utils/Python/requirements.txt`](./utils/Python/requirements.txt). Maybe you need github login, because there are a dependency called `EO Cubes` that will need permission user for installation:
 
 ~~~dos
 python -m pip install --upgrade pip &&
     python -m pip install -r ./utils/Python/requirements.txt
 ~~~
 
- - **Step 4**. Run jupyter lab environment server and enjoy:
+- Add `R-Kernel` kernel specification to `Jupyter` installation, so long the `Jupyterhub` will recognize the kernel installation to work interactively:
+
+~~~dos
+R -e "IRkernel::installspec(name = 'R3', displayname = 'sample-assessment')"
+~~~
+
+ - **Step 3**. Run jupyter lab environment server and enjoy:
 
 ~~~dos
 jupyter lab
