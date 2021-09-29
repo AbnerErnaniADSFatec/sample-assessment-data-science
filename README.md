@@ -88,7 +88,7 @@ python -m pip install --upgrade pip &&
 jupyter lab
 ~~~
 
-With the dependencies installed it is possible to run the Jupyter notebook environment and also possible to run the _scripts_ present in this repository. This apprach is based on two `Jupyter Notebooks` as you see below:
+With the dependencies installed it is possible to run the Jupyter notebook environment and also possible to run the _scripts_ present in this repository. This approach is based on two `Jupyter Notebooks` as you see below:
 
  - The notebook for image pre-processing and download for creation of data cube using Python programming language: [Jupyter Notebook for Image Pre-Processing](./ImageProcessingSER413TrabalhoFinalAbnerAnjos.ipynb);
  - The notebook for creation of data cube and analysis and classification land use and land cover using the R programming language: [Jupyter Notebook for a Sample Analysis and Classification](./DataScienceCAP394TrabalhoFinalAbnerAnjos.ipynb).
