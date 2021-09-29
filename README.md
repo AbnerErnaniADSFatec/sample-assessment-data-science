@@ -63,7 +63,7 @@ conda activate sample-assessment
 conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits r-gdalcubes r-gdal r-stars r-tensorflowc
 ~~~
 
- - Install the necessary dependencies for data visualization and analysis that are listed in this file [`./utils/R/install-requirements.r`](./utils/install-requirements.r) to facilitate the installation for R packages:
+ - Install the necessary dependencies for data visualization and analysis that are listed in this file [`./utils/R/install-requirements.r`](./utils/R/install-requirements.r) to facilitate the installation for R packages:
 
 ~~~dos
 R -e "source('./utils/R/install-requirements.r')"
