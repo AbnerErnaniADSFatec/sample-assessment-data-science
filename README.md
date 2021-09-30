@@ -60,7 +60,7 @@ conda activate sample-assessment
  - **Step 2**. Generate the R Kernel for the environment. First install the packages `R-kernel`, `Jupyter`, `SITS` dependencies and the `stars` library for image raster data manipulation:
 
 ~~~dos
-conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits r-gdalcubes r-gdal r-stars r-tensorflowc
+conda install -c conda-forge r-recommended r-irkernel jupyterlab r-sits r-gdalcubes r-rgdal r-stars r-tensorflow
 ~~~
 
  - Install the necessary dependencies for data visualization and analysis that are listed in this file [`./utils/R/install-requirements.r`](./utils/R/install-requirements.r) to facilitate the installation for R packages:
